@@ -49,7 +49,27 @@ public class HomeController {
 		model.addAttribute("lstStaff", lstStaff);
 		return "home";
 	}
-
+	@RequestMapping(value = "/home", method = RequestMethod.GET)
+	public String home1(Locale locale, Model model) {
+		List<String> lstStaff = new ArrayList<>();
+		lstStaff.add("Hậu Phạm");
+		lstStaff.add("Nhàn");
+		lstStaff.add("Hà Mint(NA)");
+		lstStaff.add("Vinh Khoa");
+		lstStaff.add("Lương Mai");
+		lstStaff.add("Nguyễn Trang");
+		lstStaff.add("Thúy Lê");
+		lstStaff.add("Vũ Hương");
+		lstStaff.add("Thăng Nhật");
+		lstStaff.add("Ngát Mint");
+		lstStaff.add("Phương Thúy");
+		lstStaff.add("Nguyện");
+		lstStaff.add("Trang Bi");
+		lstStaff.add("Nhung Sakura");
+		lstStaff.add("Nguyễn Thủy");
+		model.addAttribute("lstStaff", lstStaff);
+		return "home";
+	}
 	@RequestMapping(value = "/downloadExcel", method = RequestMethod.POST)
 	public void downloadExcel(HttpServletRequest request, HttpServletResponse response, Model model) throws Exception {
 		Map<String, Object> beans =  new HashMap<String, Object>();
