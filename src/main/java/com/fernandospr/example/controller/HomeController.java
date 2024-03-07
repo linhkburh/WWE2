@@ -49,8 +49,8 @@ public class HomeController {
 		model.addAttribute("lstStaff", lstStaff);
 		return "home";
 	}
-	@RequestMapping(value = "/home", method = RequestMethod.GET)
-	public String home1(Locale locale, Model model) {
+	@RequestMapping(value = "/flower", method = RequestMethod.GET)
+	public String flower(Locale locale, Model model) {
 		List<String> lstStaff = new ArrayList<>();
 		lstStaff.add("Hậu Phạm");
 		lstStaff.add("Nhàn");
@@ -68,7 +68,7 @@ public class HomeController {
 		lstStaff.add("Nhung Sakura");
 		lstStaff.add("Nguyễn Thủy");
 		model.addAttribute("lstStaff", lstStaff);
-		return "home";
+		return "flower";
 	}
 	@RequestMapping(value = "/downloadExcel", method = RequestMethod.POST)
 	public void downloadExcel(HttpServletRequest request, HttpServletResponse response, Model model) throws Exception {
