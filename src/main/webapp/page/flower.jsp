@@ -87,15 +87,15 @@
             <div class="swiper-wrapper">
                 <div class="intro11-section swiper-slide slide-5 slide-bg-1 bg-position">
                     <!-- Intro Content Start -->
-                    <h1 class="titleView">Trần Thị Thảo</h1>
+                    <!-- <h1 class="titleView">Trần Thị Thảo</h1> -->
                     <div class="intro11-content-2 text-center">
                         <form action="downloadExcel" method="post" id="formData">
 							 <label>Mốc thời gian: </label>
-							 <input style="padding: 5px 2px; width: 15%; margin-bottom: 10px;" type="date" id="dateData" name="dateData" required><br> 
+							 <input style="border: 1px solid #e72463;border-radius: 10px;padding: 5px 2px; width: 15%; margin-bottom: 10px;" type="date" id="dateData" name="dateData" required><br> 
 							 <label>Danh sách người được quản lý(Tên các sheet): </label>
 							 <div id="divStaff">
 							 <c:forEach items="#{lstStaff}" var="item" varStatus="loop">
-								<input style="padding: 5px 2px; width: 20%;" type="text" name="staffData" value="${item}"><input type="checkbox" name="arrQim" class="selectRow">
+								<input style="border: 1px solid #e72463;border-radius: 10px; padding: 5px 15px; width: 20%;" type="text" name="staffData" value="${item}"><input type="checkbox" name="arrQim" class="selectRow">
 								 <c:if test="${loop.index % 2 == 1 and not loop.last}">
 							        <br>
 							    </c:if>
@@ -166,9 +166,9 @@
 		    function addStaff() {
 		    	var numEle = $('#divStaff .selectRow').length % 2;
 		    	if(numEle==0){
-		    		$('#divStaff').append('<br/><input style="padding: 5px 2px; width: 20%;" type="text" name="staffData"><input type="checkbox" name="arrQim" class="selectRow">');
+		    		$('#divStaff').append('<br/><input style="border: 1px solid #e72463;border-radius: 10px; padding: 5px 15px; width: 20%;" type="text" name="staffData" value="${item}"><input type="checkbox" name="arrQim" class="selectRow">');
 		    	}else{
-		    		$('#divStaff').append('<input style="padding: 5px 2px; width: 20%;" type="text" name="staffData"><input type="checkbox" name="arrQim" class="selectRow">');
+		    		$('#divStaff').append('<input style="border: 1px solid #e72463;border-radius: 10px; padding: 5px 15px; width: 20%;" type="text" name="staffData" value="${item}"><input type="checkbox" name="arrQim" class="selectRow">');
 		    	}
 		        	
 		    }

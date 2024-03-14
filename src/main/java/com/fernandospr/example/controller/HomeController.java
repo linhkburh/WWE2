@@ -47,7 +47,7 @@ public class HomeController {
 		lstStaff.add("Nhung Sakura");
 		lstStaff.add("Nguyễn Thủy");
 		model.addAttribute("lstStaff", lstStaff);
-		return "home";
+		return "flower";
 	}
 	@RequestMapping(value = "/flower", method = RequestMethod.GET)
 	public String flower(Locale locale, Model model) {
