@@ -1,6 +1,10 @@
 package com.fernandospr.example.controller;
 
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -15,10 +19,22 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.util.CellRangeAddress;
+import org.apache.poi.util.IOUtils;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.MultiFormatWriter;
+import com.google.zxing.WriterException;
+import com.google.zxing.client.j2se.MatrixToImageWriter;
+import com.google.zxing.common.BitMatrix;
+import com.google.zxing.qrcode.QRCodeWriter;
 
 import net.sf.jxls.transformer.XLSTransformer;
 
@@ -116,5 +132,24 @@ public class HomeController {
 			}
 		}
 		book.removeSheetAt(book.getSheetIndex(sheetTemp));
+	}
+	@RequestMapping(value = "/getImg", method = RequestMethod.GET)
+	public ResponseEntity<byte[]> getImg(HttpServletRequest request) throws IOException {
+		ClassLoader classLoader = getClass().getClassLoader();
+		InputStream inputStream1 = classLoader.getResourceAsStream("/templates/thaolike.jpg");
+		byte[] inputImageBytes1 = IOUtils.toByteArray(inputStream1);
+		return ResponseEntity.ok().contentLength(inputImageBytes1.length).contentType(MediaType.IMAGE_PNG).body(inputImageBytes1);
+	}
+	
+	@RequestMapping(value = "/test", method = RequestMethod.GET)
+	public void test(HttpServletRequest request) {
+		ClassLoader classLoader = getClass().getClassLoader();
+		InputStream inputStream1 = classLoader.getResourceAsStream("/templates/thaolike.jpg");
+	}
+	
+	@RequestMapping(value = "/workWithFb", method = RequestMethod.GET)
+	public String fbApi(Locale locale, Model model) {
+		
+		return "workFb";
 	}
 }

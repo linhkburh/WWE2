@@ -10,6 +10,28 @@
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+	<!-- HTML Meta Tags -->
+	<meta name="description" content="ngrok is the fastest way to put anything on the internet with a single command.">
+	
+	<!-- Facebook Meta Tags -->
+	<meta property="og:url" content="https://right-dominant-salmon.ngrok-free.app/wwe/">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="ngrok is the fastest way to put anything on the internet with a single command.">
+	<meta property="og:image" content="https://opengraph.b-cdn.net/production/documents/ae157a0e-0cb8-48dd-8c0f-a27681b825ab.png?token=Y_ohU9B9YhCpM71Oc9xLi_UAM9-dRiajVe2tX1J9UtM&height=1451&width=1067&expires=33249335833">
+	
+	<!-- Twitter Meta Tags -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta property="twitter:domain" content="right-dominant-salmon.ngrok-free.app">
+	<meta property="twitter:url" content="https://right-dominant-salmon.ngrok-free.app/wwe/">
+	<meta name="twitter:title" content="">
+	<meta name="twitter:description" content="ngrok is the fastest way to put anything on the internet with a single command.">
+	<meta name="twitter:image" content="https://opengraph.b-cdn.net/production/documents/ae157a0e-0cb8-48dd-8c0f-a27681b825ab.png?token=Y_ohU9B9YhCpM71Oc9xLi_UAM9-dRiajVe2tX1J9UtM&height=1451&width=1067&expires=33249335833">
+	
+	<!-- Meta Tags Generated via https://www.opengraph.xyz -->
+    
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
 
